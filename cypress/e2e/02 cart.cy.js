@@ -4,7 +4,7 @@ describe("Testando funcionalidade do carrinho do site saucedemo.com na resoluç�
     cy.viewport("iphone-xr");
   });
 
-  it("adicionar item Sauce Labs Bike Light ao carrinho no iphoneXR", () => {
+  it("adicionar item Sauce Labs Bike Light ao carrinho no iphoneXR (com usuário padrão)", () => {
     cy.login("standard_user", "secret_sauce");
     cy.get("#add-to-cart-sauce-labs-bike-light").click();
     cy.get("span[data-test=shopping-cart-badge]").contains("1").should("be.visible");
